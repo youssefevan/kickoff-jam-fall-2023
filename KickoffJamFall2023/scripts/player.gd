@@ -17,6 +17,7 @@ func _physics_process(delta) -> void:
 		if c.get_collider() is RigidBody2D:
 			c.get_collider().apply_central_impulse(-c.get_normal() * push_force)
 	
+	print(move_input)
 	move_and_slide()
 
 func handle_input() -> void:
