@@ -1,14 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8r1hp0gokp8b"]
+[gd_scene load_steps=4 format=3 uid="uid://c8r1hp0gokp8b"]
 
-[ext_resource type="Texture2D" uid="uid://d0mdlraiwla7v" path="res://sprites/tile.png" id="1_r8gcm"]
+[ext_resource type="Script" path="res://scripts/boulder.gd" id="1_5atrj"]
+[ext_resource type="Texture2D" uid="uid://drmf6ei0prp1y" path="res://sprites/boulder.png" id="1_nwcmq"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_r6kc5"]
-radius = 32.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h1g08"]
+size = Vector2(64, 64)
 
-[node name="Boulder" type="CharacterBody2D"]
+[node name="Boulder" type="RigidBody2D"]
+mass = 25.0
+gravity_scale = 0.0
+script = ExtResource("1_5atrj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_r8gcm")
+position = Vector2(1.90735e-06, 1.90735e-06)
+scale = Vector2(4, 4)
+texture = ExtResource("1_nwcmq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_r6kc5")
+shape = SubResource("RectangleShape2D_h1g08")
