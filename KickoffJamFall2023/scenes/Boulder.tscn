@@ -1,18 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://c8r1hp0gokp8b"]
 
-[ext_resource type="Texture2D" uid="uid://bjt0gxo06ti3w" path="res://sprites/cone.png" id="1_wav2t"]
+[ext_resource type="Texture2D" uid="uid://d0mdlraiwla7v" path="res://sprites/tile.png" id="1_r8gcm"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_57081"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_r6kc5"]
+radius = 32.0
 
-[node name="Boulder" type="Node2D"]
+[node name="Boulder" type="CharacterBody2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_r8gcm")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(20, 13)
-shape = SubResource("RectangleShape2D_57081")
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(20, 13)
-scale = Vector2(0.15625, 0.15625)
-texture = ExtResource("1_wav2t")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_r6kc5")
