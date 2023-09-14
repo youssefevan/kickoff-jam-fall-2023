@@ -18,4 +18,5 @@ func move(dir):
 	elif ray.get_collider() is TileMap:
 		pass
 	elif ray.get_collider() is Entity:
-		ray.get_collider().push(dir)
+		if ray.get_collider().push(dir) == true:
+			movement_tween(dir)

@@ -9,3 +9,6 @@ func push(dir):
 	
 	if !ray.is_colliding():
 		movement_tween(dir)
+		return true
+	else:
+		return false
