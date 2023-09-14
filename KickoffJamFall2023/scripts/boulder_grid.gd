@@ -1,5 +1,5 @@
 extends Entity
-class_name Item
+class_name Pushable
 
 @onready var ray = $PhysicsRay
 

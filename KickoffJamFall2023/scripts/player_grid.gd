@@ -2,8 +2,6 @@ extends Entity
 
 @onready var ray = $PhysicsRay
 
-var current_item : Item
-
 func _unhandled_input(event):
 	for dir in inputs.keys():
 		if event.is_action_pressed(dir) and moving == false:
