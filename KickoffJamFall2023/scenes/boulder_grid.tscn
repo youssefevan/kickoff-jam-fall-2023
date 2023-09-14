@@ -17,3 +17,5 @@ texture = ExtResource("1_6scxs")
 
 [node name="Collider" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ully6")
+
+[node name="PhysicsRay" type="RayCast2D" parent="."]
