@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://vkcmqy6a3fvx"]
+[gd_scene load_steps=5 format=3 uid="uid://vkcmqy6a3fvx"]
 
 [ext_resource type="PackedScene" uid="uid://xkm7yrbouirx" path="res://scenes/player_grid.tscn" id="1_sqhh3"]
 [ext_resource type="PackedScene" uid="uid://in17ywkbxbmc" path="res://scenes/tile_map.tscn" id="2_64l1k"]
 [ext_resource type="PackedScene" uid="uid://lapt7kiatri8" path="res://scenes/boulder_grid.tscn" id="3_0cos2"]
+[ext_resource type="PackedScene" uid="uid://cn75vhws468m5" path="res://scenes/torch.tscn" id="4_s67g7"]
 
 [node name="WorldGrid" type="Node2D"]
 
@@ -14,3 +15,9 @@ layer_0/tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608,
 
 [node name="BoulderGrid" parent="." instance=ExtResource("3_0cos2")]
 position = Vector2(576, 256)
+
+[node name="Torch" parent="." instance=ExtResource("4_s67g7")]
+position = Vector2(384, 384)
+
+[node name="BoulderGrid2" parent="." instance=ExtResource("3_0cos2")]
+position = Vector2(704, 256)
