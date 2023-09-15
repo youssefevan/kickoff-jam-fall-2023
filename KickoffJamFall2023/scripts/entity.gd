@@ -5,6 +5,8 @@ var tile_size = 64
 var animation_speed = 10
 var moving = false
 
+@export_enum("Boulder", "Torch") var type : String
+
 var inputs = {"right": Vector2.RIGHT,
 			"left": Vector2.LEFT,
 			"up": Vector2.UP,

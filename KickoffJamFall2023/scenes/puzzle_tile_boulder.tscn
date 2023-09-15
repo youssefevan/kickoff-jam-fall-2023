@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://lxxugw4k43hd"]
+
+[ext_resource type="PackedScene" uid="uid://bi1m0m1q168iq" path="res://scenes/puzzle_tile.tscn" id="1_m3j0m"]
+
+[node name="PuzzleTileBoulder" instance=ExtResource("1_m3j0m")]

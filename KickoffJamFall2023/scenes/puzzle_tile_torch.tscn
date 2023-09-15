@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://do441gpj1d4po"]
+
+[ext_resource type="PackedScene" uid="uid://bi1m0m1q168iq" path="res://scenes/puzzle_tile.tscn" id="1_ojpvm"]
+[ext_resource type="Texture2D" uid="uid://drdpwlxpe3ksd" path="res://sprites/torch_pressure_plate.png" id="2_ale31"]
+
+[node name="PuzzleTileTorch" instance=ExtResource("1_ojpvm")]
+type = "Torch"
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource("2_ale31")
