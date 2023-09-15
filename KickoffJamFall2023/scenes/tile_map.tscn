@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://in17ywkbxbmc"]
+[gd_scene load_steps=7 format=3 uid="uid://in17ywkbxbmc"]
 
 [ext_resource type="Texture2D" uid="uid://d0mdlraiwla7v" path="res://sprites/tile.png" id="1_1htvi"]
+[ext_resource type="Texture2D" uid="uid://vkiv6q8b5wt1" path="res://sprites/Cave_Floor_1.jpg" id="2_g11tx"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_s06ej"]
 
@@ -12,11 +13,19 @@ texture_region_size = Vector2i(64, 64)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h4cko"]
+texture = ExtResource("2_g11tx")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
 [sub_resource type="TileSet" id="TileSet_c3h2h"]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_s06ej")
 sources/0 = SubResource("TileSetAtlasSource_ih2n8")
+sources/1 = SubResource("TileSetAtlasSource_h4cko")
 
 [node name="TileMap" type="TileMap"]
 tile_set = SubResource("TileSet_c3h2h")

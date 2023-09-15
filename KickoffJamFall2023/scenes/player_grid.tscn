@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://xkm7yrbouirx"]
+[gd_scene load_steps=5 format=3 uid="uid://xkm7yrbouirx"]
 
 [ext_resource type="Texture2D" uid="uid://i8etmgow2k8m" path="res://sprites/player.png" id="1_5b8h4"]
 [ext_resource type="Script" path="res://scripts/player_grid.gd" id="1_nkxc1"]
+[ext_resource type="Texture2D" uid="uid://c1xb3q3bb8eha" path="res://sprites/light.png" id="3_5hihq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bo5bu"]
 size = Vector2(64, 64)
@@ -11,8 +12,7 @@ collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_nkxc1")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(4, 4)
+[node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_5b8h4")
 
 [node name="Collider" type="CollisionShape2D" parent="."]
@@ -22,3 +22,7 @@ shape = SubResource("RectangleShape2D_bo5bu")
 target_position = Vector2(72, 0)
 collision_mask = 5
 collide_with_areas = true
+
+[node name="Light" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_5hihq")
