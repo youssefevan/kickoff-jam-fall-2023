@@ -12,3 +12,6 @@ func push(dir):
 		return true
 	else:
 		return false
+
+func kill():
+	call_deferred("queue_free")

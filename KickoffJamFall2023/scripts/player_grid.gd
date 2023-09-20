@@ -18,3 +18,11 @@ func move(dir):
 	elif ray.get_collider() is Entity:
 		if ray.get_collider().push(dir) == true:
 			movement_tween(dir)
+
+
+func _on_area_entered(area):
+	if area is Pit:
+		kill()
+
+func kill():
+	call_deferred("queue_free")
