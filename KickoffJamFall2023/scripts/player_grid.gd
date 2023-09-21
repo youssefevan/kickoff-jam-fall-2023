@@ -22,7 +22,8 @@ func move(dir):
 
 func _on_area_entered(area):
 	if area is Pit:
-		kill()
+		if area.current_boulders != area.capacity:
+			kill()
 
 func kill():
 	call_deferred("queue_free")
