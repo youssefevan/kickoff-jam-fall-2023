@@ -18,6 +18,9 @@ layer_0/tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608,
 [node name="BoulderGrid" parent="." instance=ExtResource("3_0cos2")]
 position = Vector2(512, 264)
 
+[node name="BoulderGrid3" parent="." instance=ExtResource("3_0cos2")]
+position = Vector2(704, 192)
+
 [node name="Torch" parent="." instance=ExtResource("4_s67g7")]
 position = Vector2(384, 384)
 
@@ -26,3 +29,7 @@ position = Vector2(640, 320)
 
 [node name="Pit" parent="." instance=ExtResource("7_owveo")]
 position = Vector2(512, 448)
+
+[node name="Pit2" parent="." instance=ExtResource("7_owveo")]
+position = Vector2(640, 448)
+capacity = 2

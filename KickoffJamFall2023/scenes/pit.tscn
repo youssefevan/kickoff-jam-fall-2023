@@ -16,6 +16,7 @@ type = "Boulder"
 [node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_q3qhj")
 hframes = 2
+vframes = 2
 
 [node name="Collider" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_hrrqq")
