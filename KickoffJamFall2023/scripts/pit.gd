@@ -5,7 +5,6 @@ class_name Pit
 var current_boulders := 0
 
 func _ready():
-	super._ready()
 	if capacity == 1:
 		$Sprite.frame = 0
 	elif capacity == 2:
