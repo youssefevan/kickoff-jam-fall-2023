@@ -5,10 +5,7 @@ class_name Pit
 var current_boulders := 0
 
 func _ready():
-	if capacity == 1:
-		$Sprite.frame = 0
-	elif capacity == 2:
-		$Sprite.frame == 2
+	update_sprite()
 
 func _on_area_entered(area):
 	if current_boulders != capacity:
@@ -23,10 +20,25 @@ func _on_area_entered(area):
 				$Collider.disabled = true
 
 func update_sprite():
-	if capacity == 1:
-		$Sprite.frame = 1
-	elif capacity == 2:
-		if current_boulders == 1:
+	if current_boulders == 0:
+		if capacity == 1:
+			$Sprite.frame = 0
+		elif capacity == 2:
+			$Sprite.frame = 2
+		else:
+			$Sprite.frame = 4
+	elif current_boulders == 1:
+		if capacity == 1:
+			$Sprite.frame = 1
+		elif capacity == 2:
 			$Sprite.frame = 3
-		if current_boulders == 2:
+		else:
+			$Sprite.frame = 5
+	elif current_boulders == 2:
+		if capacity == 2:
+			$Sprite.frame = 1
+		elif capacity == 3:
+			$Sprite.frame = 3
+	elif current_boulders == 3:
+		if capacity == 3:
 			$Sprite.frame = 1

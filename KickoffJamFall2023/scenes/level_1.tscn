@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c5w7wcf6agwjy"]
+[gd_scene load_steps=6 format=3 uid="uid://c5w7wcf6agwjy"]
 
 [ext_resource type="PackedScene" uid="uid://in17ywkbxbmc" path="res://scenes/tile_map.tscn" id="1_u3r6i"]
 [ext_resource type="PackedScene" uid="uid://xkm7yrbouirx" path="res://scenes/player_grid.tscn" id="2_3g0yn"]
 [ext_resource type="PackedScene" uid="uid://lapt7kiatri8" path="res://scenes/boulder_grid.tscn" id="3_i6p1q"]
 [ext_resource type="PackedScene" uid="uid://x61xkbqe2tmk" path="res://scenes/pit.tscn" id="4_3k6f2"]
+[ext_resource type="PackedScene" uid="uid://di7mevuen2v4a" path="res://scenes/exit.tscn" id="5_wat6w"]
 
 [node name="Level1" type="Node2D"]
 
@@ -49,3 +50,6 @@ position = Vector2(1120, 288)
 
 [node name="Pit3" parent="." instance=ExtResource("4_3k6f2")]
 position = Vector2(992, 608)
+
+[node name="Exit" parent="." instance=ExtResource("5_wat6w")]
+position = Vector2(96, 160)
