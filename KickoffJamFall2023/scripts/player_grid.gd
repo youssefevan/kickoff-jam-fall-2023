@@ -24,6 +24,8 @@ func _on_area_entered(area):
 	if area is Pit:
 		if area.current_boulders != area.capacity:
 			kill()
+	elif area.get_collision_layer_value(6):
+		print("exit")
 
 func kill():
 	call_deferred("queue_free")

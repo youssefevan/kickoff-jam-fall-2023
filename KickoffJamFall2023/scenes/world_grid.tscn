@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://vkcmqy6a3fvx"]
+[gd_scene load_steps=7 format=3 uid="uid://vkcmqy6a3fvx"]
 
 [ext_resource type="PackedScene" uid="uid://xkm7yrbouirx" path="res://scenes/player_grid.tscn" id="1_sqhh3"]
 [ext_resource type="PackedScene" uid="uid://in17ywkbxbmc" path="res://scenes/tile_map.tscn" id="2_64l1k"]
 [ext_resource type="PackedScene" uid="uid://lapt7kiatri8" path="res://scenes/boulder_grid.tscn" id="3_0cos2"]
 [ext_resource type="PackedScene" uid="uid://cn75vhws468m5" path="res://scenes/torch.tscn" id="4_s67g7"]
+[ext_resource type="PackedScene" uid="uid://di7mevuen2v4a" path="res://scenes/exit.tscn" id="6_kgiha"]
 [ext_resource type="PackedScene" uid="uid://x61xkbqe2tmk" path="res://scenes/pit.tscn" id="7_owveo"]
 
 [node name="WorldGrid" type="Node2D"]
@@ -46,3 +47,6 @@ capacity = 2
 [node name="Pit3" parent="." instance=ExtResource("7_owveo")]
 position = Vector2(736, 480)
 capacity = 3
+
+[node name="Exit" parent="." instance=ExtResource("6_kgiha")]
+position = Vector2(992, 480)
