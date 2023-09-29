@@ -19,13 +19,16 @@ func move(dir):
 		if ray.get_collider().push(dir) == true:
 			movement_tween(dir)
 
+func _process(delta):
+	if Input.is_action_just_pressed("restart"):
+		get_tree().reload_current_scene()
 
 func _on_area_entered(area):
 	if area is Pit:
 		if area.current_boulders != area.capacity:
 			kill()
-	elif area.get_collision_layer_value(6):
-		print("exit")
+	elif area is Exit:
+		get_tree().change_scene_to_packed(area.next_level)
 
 func kill():
 	call_deferred("queue_free")

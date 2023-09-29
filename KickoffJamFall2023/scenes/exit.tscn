@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://di7mevuen2v4a"]
+[gd_scene load_steps=4 format=3 uid="uid://di7mevuen2v4a"]
 
+[ext_resource type="Script" path="res://scripts/exit.gd" id="1_oc6n8"]
 [ext_resource type="Texture2D" uid="uid://brgrnwu2ry3w2" path="res://sprites/exit.png" id="1_pcu5u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6muhk"]
@@ -8,6 +9,7 @@ size = Vector2(16, 16)
 [node name="Exit" type="Area2D"]
 collision_layer = 32
 collision_mask = 6
+script = ExtResource("1_oc6n8")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_pcu5u")
